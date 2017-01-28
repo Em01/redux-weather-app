@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Sparklines, SparklinesLine } from 'react-sparklines'
+import Chart from '../components/chart'
 
  class WeatherList extends Component {
 
@@ -12,9 +12,7 @@ import { Sparklines, SparklinesLine } from 'react-sparklines'
        <tr key={name}>
           <td>{name}</td>
           <td>
-            <Sparklines height={120} width={180} data={temps}>
-              <SparklinesLine color="red" />
-            </Sparklines>
+            <Chart data={temps} color="orange" />
           </td>
        </tr>
      );
@@ -41,7 +39,7 @@ import { Sparklines, SparklinesLine } from 'react-sparklines'
 
 function mapStateToProps({ weather }) {
   return {  weather }
-  // Aame as {weather: state.weather}
+  // Same as {weather: state.weather}
 }
 
 export default connect(mapStateToProps)(WeatherList);
