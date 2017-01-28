@@ -1,0 +1,19 @@
+td, th {
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+.input-group {
+  width: 90%;
+  margin: 20px 0px;
+}
+
+.btn-secondary {
+  position: absolute;
+  margin-left: .5em;
+}
+
+svg{
+  height: 150px;
+  width: 180px;
+}
